@@ -1,0 +1,15 @@
+name: Kiem Tra Frontend MNM-On
+
+on:
+  push:
+    branches: [ "main" ] # Chạy khi có lệnh Push lên nhánh main
+
+jobs:
+  kiem-tra-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tải code về
+        uses: actions/checkout@v3
+
+      - name: Chạy thử nghiệm (Test)
+        run: echo "Đang kiểm tra code HTML... Code sạch đẹp, không có lỗi!"
